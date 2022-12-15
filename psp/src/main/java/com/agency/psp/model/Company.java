@@ -26,12 +26,14 @@ public class Company implements UserDetails {
     private String pib;
     @Column
     private String name;
-    @Column
+    @Column(length = 100000)
     private String description;
     @Column
     private String password;
     @ManyToOne(fetch = FetchType.EAGER,cascade =  CascadeType.ALL)
     private Role role;
+    @OneToOne(fetch = FetchType.EAGER,cascade =  CascadeType.ALL)
+    private Address address;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<Role> collection = new ArrayList<Role>();

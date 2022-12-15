@@ -1,6 +1,7 @@
 package com.agency.psp.controller;
 
 import com.agency.psp.dtos.AuthenticationRequestDto;
+import com.agency.psp.dtos.CompanyDto;
 import com.agency.psp.dtos.CompanyTokenStateDto;
 import com.agency.psp.model.Company;
 import com.agency.psp.services.CompanyService;
@@ -37,11 +38,11 @@ public class AuthenticationController {
     }
 
     @PostMapping("/registration")
-    public ResponseEntity<Company> register(@RequestBody Company newCompany) {
+    public ResponseEntity<CompanyDto> register(@RequestBody Company newCompany) {
         if(companyService.findByPib(newCompany.getPib()) !=null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        Company company = companyService.save(newCompany);
+        CompanyDto company = new CompanyDto(companyService.save(newCompany));
         return new ResponseEntity<>(company, HttpStatus.CREATED);
     }
 }
