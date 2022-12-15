@@ -99,3 +99,6 @@ fabric.properties
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Java,Intellij
 .idea/misc.xml
+
+#ignore whole folder
+.idea/**
