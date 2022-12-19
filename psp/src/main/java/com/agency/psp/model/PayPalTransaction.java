@@ -29,6 +29,8 @@ public class PayPalTransaction {
     @Column
     private double amount;
     @Column
+    private String description;
+    @Column
     private String currency;
     @Column
     private String payeeEmail;
@@ -37,12 +39,13 @@ public class PayPalTransaction {
     @Column
     private LocalDateTime dateAndTime;
 
-    public PayPalTransaction(String paymentId, String payerName, String payerLastname, String payerEmail, double amount, String currency, String payeeEmail, String payeeName, LocalDateTime dateAndTime) {
+    public PayPalTransaction(String paymentId, String payerName, String payerLastname, String payerEmail, double amount, String description, String currency, String payeeEmail, String payeeName, LocalDateTime dateAndTime) {
         this.paymentId = paymentId;
         this.payerName = payerName;
         this.payerLastname = payerLastname;
         this.payerEmail = payerEmail;
         this.amount = amount;
+        this.description = description;
         this.currency = currency;
         this.payeeEmail = payeeEmail;
         this.payeeName = payeeName;

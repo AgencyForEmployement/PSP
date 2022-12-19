@@ -28,6 +28,7 @@ public class PayPalTransactionController {
                 transaction.getPayerLastname(),
                 transaction.getPayerEmail(),
                 transaction.getAmount(),
+                transaction.getDescription(),
                 transaction.getCurrency(),
                 transaction.getPayeeEmail(),
                 transaction.getPayeeName(),
