@@ -51,7 +51,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint).and()
-                .authorizeRequests().antMatchers("/authentication/**").permitAll()
+                .authorizeRequests().antMatchers("/authentication/**").permitAll().and()
+                .authorizeRequests().antMatchers("/paypal/**").permitAll()
 
                 .anyRequest().authenticated().and()
                 .cors().and()
@@ -63,6 +64,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web){
         web.ignoring().antMatchers(HttpMethod.POST, "/authentication/login")
-                .antMatchers(HttpMethod.POST, "/authentication/registration");
+                .antMatchers(HttpMethod.POST, "/authentication/registration")
+                .antMatchers(HttpMethod.POST, "/paypal/save");
     }
 }
