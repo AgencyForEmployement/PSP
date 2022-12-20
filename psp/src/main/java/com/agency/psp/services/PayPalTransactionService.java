@@ -13,8 +13,8 @@ public class PayPalTransactionService {
         this.repository = repository;
     }
 
-    public void save(PayPalTransaction transaction) {
-        repository.save(transaction);
+    public PayPalTransaction save(PayPalTransaction transaction) {
+        return repository.save(transaction);
     }
 
 }
