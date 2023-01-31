@@ -53,6 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint).and()
                 .authorizeRequests().antMatchers("/authentication/**").permitAll().and()
                 .authorizeRequests().antMatchers("/paypal/**").permitAll()
+                .antMatchers("/bank/**").permitAll()
 
                 .anyRequest().authenticated().and()
                 .cors().and()

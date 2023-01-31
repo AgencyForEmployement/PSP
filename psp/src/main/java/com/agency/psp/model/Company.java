@@ -30,6 +30,12 @@ public class Company implements UserDetails {
     private String description;
     @Column
     private String password;
+    @Column
+    private String merchantId;
+    @Column
+    private String merchantPassword;
+    @OneToMany(mappedBy = "company", fetch = FetchType.EAGER,cascade =  CascadeType.PERSIST)
+    private List<PaymentURL> paymentURLS;
     @ManyToOne(fetch = FetchType.EAGER,cascade =  CascadeType.ALL)
     private Role role;
     @OneToOne(fetch = FetchType.EAGER,cascade =  CascadeType.ALL)
