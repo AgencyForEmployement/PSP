@@ -12,6 +12,6 @@ public class OrderDTO {
     private String description;
     private String pib;
     private String merchantOrderId;
-    private String merchantOrderTimestamp; //ovo treba da bude ti LocalDateTime, nije jos toga bilo na web shopu pa sam stavila ovako zbog testiranja
+    private LocalDateTime merchantOrderTimestamp; //ovo treba da bude ti LocalDateTime, nije jos toga bilo na web shopu pa sam stavila ovako zbog testiranja
 
 }
