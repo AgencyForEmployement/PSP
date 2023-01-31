@@ -17,6 +17,7 @@ public class BankTransactionController {
 
     private final BankTransactionService bankTransactionService;
 
+    //ovo se gadja iz banke kada se zavrsi transakcija unutar iste banke
     @PostMapping
     public ResponseEntity<HttpStatus> save(@RequestBody PSPResponseDto bankTransaction){
 

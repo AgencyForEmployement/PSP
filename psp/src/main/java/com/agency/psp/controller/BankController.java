@@ -20,6 +20,7 @@ public class BankController {
     private final BankService bankService;
     private final RestTemplate restTemplate;
 
+    //kada neko odabere na forontu placanje karticom
     @PostMapping
     public ResponseEntity<PaymentResponseDTO> save(@RequestBody OrderDTO order){
         PaymentForBankRequestDto paymentForBankRequestDto = bankService.payWithCard(order);

@@ -22,7 +22,7 @@ public class BankService {
         paymentForBankRequestDto.setMerchantPassword(company.getMerchantPassword());
         paymentForBankRequestDto.setAmount(Double.parseDouble(order.getPrice()));
         paymentForBankRequestDto.setMerchantOrderId(Integer.parseInt(order.getMerchantOrderId()));
-        paymentForBankRequestDto.setMerchantTimestamp(LocalDateTime.now());  //ovo uzeti zapravo iz order-a kada ne bude string
+        paymentForBankRequestDto.setMerchantTimestamp(LocalDateTime.now());
         paymentForBankRequestDto.setSuccessUrl(companyService.findUrl(PaymentURLType.SUCCESS, company));
         paymentForBankRequestDto.setErrorUrl(companyService.findUrl(PaymentURLType.ERROR, company));
         paymentForBankRequestDto.setFailedUrl(companyService.findUrl(PaymentURLType.FAILED, company));
