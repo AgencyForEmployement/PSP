@@ -17,6 +17,6 @@ public class UpdateBitcoinTransactionDTO {
     private String orderableType;
     private String orderableId;
     private String cryptoCurrency;
-    private long cryptoAmount;
+    private double cryptoAmount;
     private String token;
 }

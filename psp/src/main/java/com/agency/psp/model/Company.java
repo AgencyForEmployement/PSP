@@ -34,11 +34,23 @@ public class Company implements UserDetails {
     private Role role;
     @OneToOne(fetch = FetchType.EAGER,cascade =  CascadeType.ALL)
     private Address address;
+    @OneToOne(fetch = FetchType.EAGER,cascade =  CascadeType.ALL)
+    private PaymentOptions paymentOptions;
+    @Column
+    private String apiKey;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<Role> collection = new ArrayList<Role>();
         collection.add(this.role);
         return collection;
+    }
+
+    public Company(String pib, String name, String description, String password, Address address) {
+        this.pib = pib;
+        this.name = name;
+        this.description = description;
+        this.password = password;
+        this.address = address;
     }
 
     @Override

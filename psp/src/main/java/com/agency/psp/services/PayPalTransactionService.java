@@ -17,4 +17,7 @@ public class PayPalTransactionService {
         return repository.save(transaction);
     }
 
+    public PayPalTransaction findByPaymentId(String paymentId) {
+        return repository.findByPaymentId(paymentId);
+    }
 }

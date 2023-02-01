@@ -9,4 +9,5 @@ public interface CompanyRepository extends JpaRepository<Company, Long> {
 
     Company findByPib(String pib);
     Company findById(long id);
+    Company findByApiKey(String apiKey);
 }

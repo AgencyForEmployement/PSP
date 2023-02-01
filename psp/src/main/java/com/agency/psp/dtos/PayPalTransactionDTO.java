@@ -1,12 +1,10 @@
 package com.agency.psp.dtos;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
+@Data
 @Setter
 @Getter
 @NoArgsConstructor
@@ -22,6 +20,7 @@ public class PayPalTransactionDTO {
     private String payeeEmail;
     private String payeeName;
     private LocalDateTime dateAndTime;
+    private String state;
 
 
 }
