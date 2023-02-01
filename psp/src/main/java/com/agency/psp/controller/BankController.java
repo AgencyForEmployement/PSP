@@ -25,7 +25,9 @@ public class BankController {
     public ResponseEntity<PaymentResponseDTO> save(@RequestBody OrderDTO order){
         PaymentForBankRequestDto paymentForBankRequestDto = bankService.payWithCard(order);
 
-        return new ResponseEntity<>(restTemplate.postForObject("http://localhost:8083/payment", paymentForBankRequestDto, PaymentResponseDTO.class), HttpStatus.OK);
+        PaymentResponseDTO response = restTemplate.postForObject("http://localhost:8083/payment", paymentForBankRequestDto, PaymentResponseDTO.class);
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
 }

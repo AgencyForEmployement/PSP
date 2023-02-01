@@ -22,10 +22,11 @@ public class BankService {
         paymentForBankRequestDto.setMerchantPassword(company.getMerchantPassword());
         paymentForBankRequestDto.setAmount(Double.parseDouble(order.getPrice()));
         paymentForBankRequestDto.setMerchantOrderId(Integer.parseInt(order.getMerchantOrderId()));
-        paymentForBankRequestDto.setMerchantTimestamp(order.getMerchantOrderTimestamp());
-        paymentForBankRequestDto.setSuccessUrl(companyService.findUrl(PaymentURLType.SUCCESS, company));
-        paymentForBankRequestDto.setErrorUrl(companyService.findUrl(PaymentURLType.ERROR, company));
-        paymentForBankRequestDto.setFailedUrl(companyService.findUrl(PaymentURLType.FAILED, company));
+        paymentForBankRequestDto.setMerchantTimestamp(LocalDateTime.now());
+        paymentForBankRequestDto.setSuccessUrl(company.getSuccessUrl());
+        paymentForBankRequestDto.setErrorUrl(company.getErrorUrl());
+        paymentForBankRequestDto.setFailedUrl(company.getFailedUrl());
+        paymentForBankRequestDto.setDescription(order.getDescription());
         return paymentForBankRequestDto;
     }
 }

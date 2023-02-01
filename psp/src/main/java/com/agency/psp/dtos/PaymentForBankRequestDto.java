@@ -1,6 +1,5 @@
 package com.agency.psp.dtos;
 
-import com.agency.psp.model.PaymentURL;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,9 +15,10 @@ public class PaymentForBankRequestDto {
       private String merchantId;
       private String merchantPassword;
       private double amount;
+      private String description;
       private int merchantOrderId;
       private LocalDateTime merchantTimestamp;
-      private PaymentURL successUrl;
-      private PaymentURL failedUrl;
-      private PaymentURL errorUrl;
+      private String successUrl;
+      private String failedUrl;
+      private String errorUrl;
 }

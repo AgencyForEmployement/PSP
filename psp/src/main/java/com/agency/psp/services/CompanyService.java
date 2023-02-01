@@ -1,9 +1,6 @@
 package com.agency.psp.services;
 
-import com.agency.psp.enums.PaymentURLType;
 import com.agency.psp.model.Company;
-import com.agency.psp.model.PaymentURL;
-import com.agency.psp.model.Role;
 import com.agency.psp.repository.CompanyRepository;
 import com.agency.psp.repository.RoleRepository;
 import lombok.AllArgsConstructor;
@@ -27,12 +24,4 @@ public class CompanyService {
         return companyRepository.findByPib(pib);
     }
 
-    public PaymentURL findUrl(PaymentURLType type, Company company) {
-        for (PaymentURL paymentURL: company.getPaymentURLS()
-             ) {
-            if (paymentURL.getPaymentURLType() == type)
-                return paymentURL;
-        }
-        return null;
-    }
 }

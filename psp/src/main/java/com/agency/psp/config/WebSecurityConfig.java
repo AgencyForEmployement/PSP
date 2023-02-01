@@ -66,6 +66,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web){
         web.ignoring().antMatchers(HttpMethod.POST, "/authentication/login")
                 .antMatchers(HttpMethod.POST, "/authentication/registration")
+                .antMatchers(HttpMethod.POST, "/bank-transaction")
                 .antMatchers(HttpMethod.POST, "/paypal/save");
     }
 }
