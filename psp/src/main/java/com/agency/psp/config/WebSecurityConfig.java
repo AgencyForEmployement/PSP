@@ -54,7 +54,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests().antMatchers("/authentication/**").permitAll().and()
                 .authorizeRequests().antMatchers("/paypal/**").permitAll().and()
                 .authorizeRequests().antMatchers("/bitcoin/**").permitAll().and()
-                .antMatchers("/bank/**").permitAll()
+                .authorizeRequests().antMatchers("/bank/**").permitAll()
 
                 .anyRequest().authenticated().and()
                 .cors().and()

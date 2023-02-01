@@ -2,6 +2,7 @@ package com.agency.psp.controller;
 
 import com.agency.psp.PspApplication;
 import com.agency.psp.dtos.OrderDTO;
+import com.agency.psp.dtos.PayPalOrderDto;
 import com.agency.psp.dtos.PayPalPaymentDTO;
 import com.agency.psp.dtos.PayPalTransactionDTO;
 import com.agency.psp.model.PayPalTransaction;
@@ -32,7 +33,7 @@ public class PayPalTransactionController {
     }
 
     @PostMapping(value="/send")
-    public ResponseEntity<PayPalPaymentDTO> send(@RequestBody OrderDTO order){
+    public ResponseEntity<PayPalPaymentDTO> send(@RequestBody PayPalOrderDto order){
         PayPalTransaction t = new PayPalTransaction(
                 "",
                 "",
