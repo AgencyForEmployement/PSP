@@ -1,17 +1,17 @@
 package com.agency.psp.dtos;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
+import java.time.LocalDateTime;
+
+@Getter
+@Setter
 public class OrderDTO {
-
-    private double price;
+    private String price;
     private String description;
+    private String pib;
+    private String merchantOrderId;
+    private String merchantOrderTimestamp; //ovo treba da bude ti LocalDateTime, nije jos toga bilo na web shopu pa sam stavila ovako zbog testiranja
 
 }

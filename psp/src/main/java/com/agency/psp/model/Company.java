@@ -30,6 +30,18 @@ public class Company implements UserDetails {
     private String description;
     @Column
     private String password;
+    @Column
+    private String merchantId;
+    @Column
+    private String urlToBankAPI;
+    @Column
+    private String merchantPassword;
+    @Column
+    private String successUrl;
+    @Column
+    private String failedUrl;
+    @Column
+    private String errorUrl;
     @ManyToOne(fetch = FetchType.EAGER,cascade =  CascadeType.ALL)
     private Role role;
     @OneToOne(fetch = FetchType.EAGER,cascade =  CascadeType.ALL)
