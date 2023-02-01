@@ -33,6 +33,8 @@ public class Company implements UserDetails {
     @Column
     private String merchantId;
     @Column
+    private String urlToBankAPI;
+    @Column
     private String merchantPassword;
     @Column
     private String successUrl;
