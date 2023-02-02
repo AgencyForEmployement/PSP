@@ -29,7 +29,7 @@ public class BankController {
         PaymentForBankRequestDto paymentForBankRequestDto = bankService.payWithCard(order);
         Company company = companyService.findByPib(order.getPib()); //http://localhost:8083/payment
 
-        PaymentResponseDTO response = restTemplate.postForObject(company.getUrlToBankAPI(), paymentForBankRequestDto, PaymentResponseDTO.class);
+        PaymentResponseDTO response = restTemplate.postForObject("http://localhost:8083/payment", paymentForBankRequestDto, PaymentResponseDTO.class);
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
