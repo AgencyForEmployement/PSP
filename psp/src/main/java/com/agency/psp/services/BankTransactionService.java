@@ -14,4 +14,6 @@ public class BankTransactionService {
     public void save(BankTransaction bankTransaction) {
         bankTransactionRepository.save(bankTransaction);
     }
+
+    public BankTransaction findByPaymentId(int paymentId) { return bankTransactionRepository.findByPaymentId(paymentId); }
 }

@@ -37,10 +37,12 @@ public class BankTransactionController {
                                                     .build()
         );
         //psp bi ovde trebao da obavesti webshop o stanju trannsakcije
-      HttpStatus response =  restTemplate.postForObject("http://localhost:8082/transactions/status", BankTransactionStatus.builder()
-            .merchantId(bankTransaction.getMerchantOrderId())
-              .status(bankTransaction.getTransactionStatus())
-              .build(), HttpStatus.class);
+        BankTransactionStatus body = BankTransactionStatus.builder().status(bankTransaction.getTransactionStatus()).merchantId(bankTransaction.getMerchantOrderId()).build();
+     System.out.print(body);
+      HttpStatus response =  restTemplate.postForObject("http://localhost:8082/transactions/status",
+              body, HttpStatus.class);
+
+       // int merchOrderId= bankTransactionService.findByPaymentId(bankTransaction.getPaymentId()).getMerchantOrderId();
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
