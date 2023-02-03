@@ -23,3 +23,31 @@
 2023-02-02 17:21:06 | INFO  | PspApplication:16 - Hello from Psp Application! Welcome back!
 2023-02-02 18:07:12 | INFO  | PspApplication:16 - Hello from Psp Application! Welcome back!
 2023-02-02 18:46:54 | INFO  | PspApplication:16 - Hello from Psp Application! Welcome back!
+2023-02-02 23:39:28 | INFO  | PspApplication:16 - Hello from Psp Application! Welcome back!
+2023-02-02 23:50:27 | INFO  | PspApplication:16 - Hello from Psp Application! Welcome back!
+2023-02-03 00:05:02 | INFO  | PspApplication:16 - Hello from Psp Application! Welcome back!
+2023-02-03 01:05:09 | INFO  | PspApplication:53 - Transaction with payment id PAYID-MPOE7NA3FE87508AR4245357 is saved. Transaction id: 44
+2023-02-03 01:06:38 | INFO  | PspApplication:68 - Transaction with payment id PAYID-MPOE7NA3FE87508AR4245357 has updated it's state to approved. Transaction id: PAYID-MPOE7NA3FE87508AR4245357
+2023-02-03 01:33:45 | INFO  | PspApplication:16 - Hello from Psp Application! Welcome back!
+2023-02-03 11:51:54 | INFO  | PspApplication:16 - Hello from Psp Application! Welcome back!
+2023-02-03 16:19:03 | INFO  | PspApplication:16 - Hello from Psp Application! Welcome back!
+2023-02-03 16:28:53 | INFO  | PspApplication:22 - Paying with credit card in process...
+2023-02-03 16:28:53 | INFO  | PspApplication:35 - Payment finished with merchant order 1064301224
+2023-02-03 16:28:53 | INFO  | PspApplication:34 - Payment with credit card requested
+2023-02-03 16:28:53 | INFO  | PspApplication:35 - Order with order id 1064301224
+2023-02-03 16:28:57 | INFO  | PspApplication:22 - Paying with credit card in process...
+2023-02-03 16:28:57 | INFO  | PspApplication:35 - Payment finished with merchant order 1064301224
+2023-02-03 16:28:57 | INFO  | PspApplication:34 - Payment with credit card requested
+2023-02-03 16:28:57 | INFO  | PspApplication:35 - Order with order id 1064301224
+2023-02-03 16:30:14 | INFO  | PspApplication:22 - Paying with credit card in process...
+2023-02-03 16:30:14 | INFO  | PspApplication:35 - Payment finished with merchant order 1054447602
+2023-02-03 16:30:14 | INFO  | PspApplication:34 - Payment with credit card requested
+2023-02-03 16:30:14 | INFO  | PspApplication:35 - Order with order id 1054447602
+2023-02-03 16:30:28 | INFO  | PspApplication:31 - Finished request for transaction. Transaction status SUCCESS
+2023-02-03 16:30:28 | INFO  | PspApplication:47 - Sending transaction status response to Web Shop  
+2023-02-03 16:32:36 | INFO  | PspApplication:22 - Paying with credit card in process...
+2023-02-03 16:32:36 | INFO  | PspApplication:35 - Payment finished with merchant order 1193396323
+2023-02-03 16:32:36 | INFO  | PspApplication:34 - Payment with credit card requested
+2023-02-03 16:32:36 | INFO  | PspApplication:35 - Order with order id 1193396323
+2023-02-03 16:33:17 | INFO  | PspApplication:31 - Finished request for transaction. Transaction status SUCCESS
+2023-02-03 16:33:17 | INFO  | PspApplication:47 - Sending transaction status response to Web Shop  
